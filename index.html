@@ -210,7 +210,7 @@ Spacedots = new function(){
       
       player.boost = Math.max( player.boost - 1, 0 );
       
-      if( player.boost > 0 && ( player.boost > 100 || player.boost % 3 != 0 ) ) {
+      if( player.boost > 0 && ( player.boost > 10 || player.boost % 3 != 0 ) ) {
         context.beginPath();
         context.fillStyle = '#167a66';//couleur interne au stade augmenter
         context.strokeStyle = 'yellow';//couleur de la bordure au stade augmenter
@@ -286,7 +286,7 @@ Spacedots = new function(){
       p = boosts[i];
       
       if( p.distanceTo( player.position ) < ( player.size + p.size ) * 0.5 && playing ) {
-        player.boost = 300;
+        player.boost = 700;
         
         for( j = 0; j < enemies.length; j++ ) {
           e = enemies[j];
